@@ -1,0 +1,51 @@
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+*.env
+*.venv
+
+# Django specific
+db.sqlite3
+/static/
+media/
+
+# Logs
+*.log
+
+# Secrets
+.env
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Migrations
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+
+# Test outputs
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.eggs
