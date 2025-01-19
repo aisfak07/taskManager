@@ -31,6 +31,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['taskmanager-mv8m.onrender.com', 'http://localhost:5173/', 'https://taskmanager-m8pp.onrender.com/']
 
+CORS_ALLOWED_ORIGINS = [
+    'taskmanager-mv8m.onrender.com',
+    "http://localhost:5173",
+    "https://taskmanager-mv8m.onrender.com",
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
