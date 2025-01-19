@@ -54,15 +54,17 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-4">Task Manager</h1>
-      <AddTask addTask={addTask} />
+    <>
+    <div className="container mx-auto h-screen">
+      <h1 className="text-2xl font-bold mb-4">Task Manager</h1>
       {loading ? (
         <p>Loading tasks...</p>
       ) : (
         <TaskList tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} />
       )}
     </div>
+    <AddTask addTask={addTask} />
+    </>
   );
 }
 

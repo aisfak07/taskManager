@@ -1,35 +1,27 @@
 import React from "react";
+import { LiaTrashAlt } from "react-icons/lia";
 
 function TaskList({ tasks, deleteTask, updateTask }) {
     const taskArray = tasks || [];
   return (
-    <ul className="list-disc pl-5">
+    <ul className="w-full flex flex-col gap-4">
       {taskArray.map((task) => (
-        <li key={task.id} className="flex items-center justify-between mb-2">
-          <span className={task.completed ? "line-through" : ""}>
-            {task.name}
-          </span>
-          <div>
-            <button
-              onClick={() =>
-                updateTask(task.id, { ...task, completed: !task.completed })
-              }
-              className={`px-4 py-1 mr-2 ${
-                task.completed ? "bg-gray-500" : "bg-green-500"
-              } text-white`}
-            >
-              {task.completed ? "Undo" : "Complete"}
-            </button>
-            <button
+        <li className="px-5 py-2 rounded-lg bg-[#f3efee] flex items-center justify-between" key={task.id}>
+            <label className="task-item flex items-center gap-3 bg-[#f3efee]">
+                <input className="w-5 h-5 appearance-none checked:text-white checked:!bg-[#9F9F9F] bg-[#f3efee] border-[#9F9F9F] ring-2 ring-[#9f9f9f83] rounded-sm checked:ring-[#9F9F9F] checked:ring-2 checked:rounded-sm" type="checkbox" checked={task.is_completed} onChange={() => updateTask(task.id, { ...task, is_completed: !task.is_completed })} />
+                <span className="bg-[#f3efee] font-medium">{task.title}</span>
+            </label>
+            <LiaTrashAlt className="text-2xl opacity-50" onClick={() => deleteTask(task.id)} />
+            {/* <button
               onClick={() => deleteTask(task.id)}
               className="bg-red-500 text-white px-4 py-1"
             >
               Delete
-            </button>
-          </div>
+            </button> */}
         </li>
       ))}
     </ul>
+    
   );
 }
 
