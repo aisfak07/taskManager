@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ['taskmanager-mv8m.onrender.com', 'http://localhost:5173/', 'htt
 CORS_ALLOWED_ORIGINS = [
     'taskmanager-mv8m.onrender.com',
     "http://localhost:5173",
-    "https://taskmanager-mv8m.onrender.com",
+    "https://taskmanager-m8pp.onrender.com/",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
