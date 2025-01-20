@@ -13,7 +13,7 @@ function AddTask({ addTask }) {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 w-full py-3 bg-[#f9f5f4] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
-    <form onSubmit={handleSubmit} className="w-[800px] py-3 flex items-center bg-[#f9f5f4] gap-3 mx-auto">
+    <form onSubmit={handleSubmit} className="lg:w-[800px] w-full py-3 px-5 flex items-center bg-[#f9f5f4] gap-3 mx-auto">
       <input
         type="text"
         className="border py-2 px-5 w-full bg-[#f3efee] rounded-md placeholder:text-[#222222]"

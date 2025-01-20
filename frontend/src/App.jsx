@@ -56,7 +56,7 @@ function App() {
   return (
     <>
     <div className="container mx-auto h-screen">
-      <h1 className="text-2xl font-bold mb-4">Task Manager</h1>
+      <h1 className="text-2xl font-bold mb-4 px-5">Task Manager</h1>
       {loading ? (
         <p>Loading tasks...</p>
       ) : (
